@@ -1,7 +1,56 @@
-h1 {
-    color: blue;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #C0D1D9;
+    color: #333;
 }
 
-p {
-    text-align: right;
+h1 {
+    color: #5B6AFF;
+}
+
+/* Attribute Selector */
+a[color="#8890E4"] {
+    color: #8890E4;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #1F6FEB;
+}
+
+/* Child Selector */
+ul>li {
+    font-weight: bold;
+}
+
+/* Sibling Selector */
+h1+p {
+    background-color: #161B22;
+    border: 2px solid #30363D;
+}
+
+a:hover::after {
+    content: " (Hovered)";
+}
+
+/* :nth-child(n) Pseudo-class */
+ul li:nth-child(3) {
+    background-color: #21262D;
+    color: #FFFFFF;
+}
+
+:not(.excluded) {
+    color: #58A6FF;
+}
+
+/* ::before Pseudo-element */
+a::before {
+    content: "[";
+    color: #FF7B72;
+}
+
+/* ::first-letter Pseudo-element */
+p::first-letter {
+    font-size: 200%;
+    color: #FF7B72;
 }
